@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
+
+
+body {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 30px;    
+    margin: 3%;
+    padding: 5%;
+    background-image: url(https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+
+}
+
+#nav{
+    display: flex;
+    justify-content: space-between;
+    font-size: 33px;
+}   
+
+#h1{
+   text-align: center;
+   font-size: 85px;
+   
+}
+
+a { 
+    color: black;
+    border: blue;
+    border-radius: 10px;
+    background-color:#f5fffa;
+    color: black;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+
+
+  
+  a:hover, a:active {
+    background-color: lightblue;
+  }
+
+
+#h3{
+    font-size: 40px;
+    display: flex;
+    justify-content: space-between;
+    }
+
+#h{
+   text-align: center;
+}
+
+.button{
+  border: none;
+  color: lightblue;
+  padding: 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 25px;
+  margin: 4px 2px;
+  font-family:  'Exo 2', sans-serif;
+}
+.donate {border-radius: 2px;}
+
+
+#h6{
+    text-align: center;
+}
+
+#form1{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    justify-content: space-between;
+}
+
+#h8{
+  text-align: center;
+}
+
+
+#img1{
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  justify-content: space-between;
+  animation: floating 3s infinite ease-in-out;
+}
+
+@keyframes floating {
+  0% {
+      transform: translateY(0px);
+  }
+
+  50% {
+      transform: translateY(30px);
+  }
+
+  100% {
+      transform: translateY(0px);
+  }
+}
+
+
+#button5{
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  justify-content: space-between;
+}
+
+#donation2{
+  font-size: 70px;
+  font: bold;
+  text-align: center;
+}
+
+#donation3{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 70px;
+}
+
+#sign1{
+  font-size: 27px;
+}
+
+#array{
+  font-size: 55px;
+}
+
+button{
+  font-size: 50px;
+}
+
+button:hover{
+  background-color: lightblue;
+  border-color: lightblue;
+}
+
+#array1{
+  font-size: 49px;
+}
+
+#amount{
+  text-align: center;
+}

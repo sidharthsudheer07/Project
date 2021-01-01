@@ -1,0 +1,144 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript">
+        function FormValidator(){
+            var firstname = document.getElementById("fname");
+            var lastname = document.getElementById("lname");
+            var emailid = document.getElementById("email");
+            var num = document.getElementById("number");
+            var year = document.getElementById("age");
+            var add = document.getElementById("add");
+            var state = document.getElementById("state");
+
+        if(isAlphabet(firstname, "Name should only contain letters" )){
+            if(isAlphabet(lastname, "Name should only contain letters")){
+                if(emailValidator(emailid, "Please enter a valid email address")){
+                    if(isNumeric(num, "Phone Number should only contains numbers")){
+                        if(isNumeric(year, "Age should be in numbers")){
+                            if(madeSelection(state, "Please choose a state")){
+                                return true;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        return false;
+
+        }
+
+        function notEmpty(elem, helperMsg){
+  if(elem.value == ""){
+    alert(helperMsg);
+    elem.focus();
+    return false;
+  }
+  return true;
+}
+
+function isNumeric(elem, helperMsg){
+  var numericExpression = /^[0-9]+$/;
+  if(elem.value.match(numericExpression)){
+    return true;
+  }else{
+    alert(helperMsg);
+    elem.focus();
+    return false;
+  }
+}
+
+function isAlphabet(elem, helperMsg){
+  var alphaExp = /^[a-zA-Z]+$/;
+  if(elem.value.match(alphaExp)){
+    return true;
+  }else{
+    alert(helperMsg);
+    elem.focus();
+    return false;
+  }
+}
+
+function isAlphanumeric(elem, helperMsg){
+  var alphaExp = /^[0-9a-zA-Z]+$/;
+  if(elem.value.match(alphaExp)){
+    return true;
+  }else{
+    alert(helperMsg);
+    elem.focus();
+    return false;
+  }
+}
+
+function lengthRestriction(elem, min, max){
+  var uInput = elem.value;
+  if(uInput.length >= min && uInput.length <= max){
+    return true;
+  }else{
+    alert("Please enter between " +min+ " and " +max+ " characters");
+    elem.focus();
+    return false;
+  }
+}
+
+function madeSelection(elem, helperMsg){
+  if(elem.value == "Please Choose"){
+    alert(helperMsg);
+    elem.focus();
+    return false;
+  }else{
+    return true;
+  }
+}
+
+function emailValidator(elem, helperMsg){
+  
+  var emailExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if(elem.value.match(emailExp)){
+    return true;
+  }else{
+    alert(helperMsg);
+    elem.focus();
+    return false;
+  }
+}
+
+
+        </script>
+    </head>
+    <body bgcolor="#00ffff">
+      <div id="form1">
+        <h1>Registration Form</h1>
+        <form onsubmit="return FormValidator()" action="validated.html" >
+            First Name: <input type="text" id="fname" ><br>  
+            Last Name: <input type="text" id="lname" ><br>
+            Email ID: <input type="email" id="email" ><br>
+            Username: <input type="text" id="user" ><br>
+            Password: <input type="password" id="pass" ><br>
+            Phone Number : <input type="tel" id="number" ><br>
+            Age: <input type="number" id="age" ><br>
+            Gender:
+            <input type="radio" id="gender" checked>Male
+            <input type="radio" id="gender">Female
+            <input type="radio" id="gender">Other<br>
+            Address: <input type="text" id="add" ><br><br>
+            State: <input list="state" name="list">
+            <datalist id="state">
+              <option value="Maharashtra"></option>
+              <option value="Goa"></option>
+              <option value="Andhra Pradesh"></option>
+              <option value="Tamil Nadu"></option>
+              <option value="Kerala"></option>
+              <option value="Telangana"></option>
+          </datalist><br><br>
+  
+
+           
+
+           <input id="sign1" type="submit" value="Submit" >
+          </div>
+        </form>
+    </body>
+</html>
